@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block body %}
+
+    <div class="breadcrumb breadcrumb-style-one">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <h2 class="breadcrumb-title">Contact Us</h2>
+                <ul class="d-flex justify-content-center breadcrumb-items">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-wrapper pt-100">
+        <div class="container">
+            <div class="row align-items-center justify-content-lg-center gy-5">
+                <div class="col-lg-6">
+                    <div class="contatc-intro-figure">
+                        <img src="{% static 'images/banner/contact-bg.png' %}" alt class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h3>Contact Info.</h3>
+                        <ul>
+                            <li><i class="bi bi-telephone-x"></i> <a href="tel:09811125050 ">+91-9811125050 </a></li>
+                    <li><i class="bi bi-telephone-x"></i> <a href="tel:09811992523  ">+91-9811992523  </a></li>
+                    <li><i class="bi bi-envelope-open"></i> <a href=""><span>hukam@Theradhatravel.com</span></a>
+                    </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-120">
+            <form  action="/contact-success" method="post">
+                {% csrf_token %}
+                <div class="contact-form-wrap">
+                    <h4>Contact now</h4>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="custom-input-group">
+                                
+                                <input type="text" name="name" id="name"  required placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="custom-input-group">
+                                
+                                <input type="text" name="phone" id="phone"  required placeholder="phone">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="custom-input-group">
+                                
+                                <input type="email" name="email" id="email"  required placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="custom-input-group">
+                                
+                                <input type="subject" name="subject" id="subject"  required placeholder="Subject">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-input-group">
+                        <textarea cols="20" rows="7"name="message"  id="message" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="custom-input-group">
+                        <div class="submite-btn">
+                            <button type="submit" value="Send Message">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    
+    {% endblock body %}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <title>The Radha Travel</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/rtlogo.png' %}" type="image/gif" sizes="20x20">
+    
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    
+    <link href="{% static 'css/boxicons.min.css' %}" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+
+    <script src="https://kit.fontawesome.com/060f122a39.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+
+          
+<header>
+    <div class="header-area header-style-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
+                    <div class="nav-logo d-flex justify-content-between align-items-center">
+                        <a href="/"><img src="{% static 'img/rtlogo.png' %}" alt="logo" width="90"></a>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="nav-right d-xl-none">
+                                <ul class="nav-actions">
+                                    <li class="category-toggle">
+                                        
+                                         <a href="" style=" color: #ff4838"> <i class="fas fa-phone fa-sm" ></i> 9811125050</a>   
+                                           
+                                        
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="mobile-menu d-flex ">
+                                <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
+                                    <span class="h-top"></span>
+                                    <span class="h-middle"></span>
+                                    <span class="h-bottom"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                    <nav class="main-nav float-end">
+                        <div class="inner-logo d-xl-none text-center">
+                            <a href="#"><img src="{% static 'img/rtlogo.png' %}" alt="logo" width="90"></a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                                
+                            </li>
+                            <li><a href="/packages-category">Packages</a></li>
+                            
+                            <li >
+                                <a href="/select-category">Feet</a>
+                                
+                            </li>
+                            <li >
+                                <a href="/services">services</a>
+                                
+                            </li>
+                            <li >
+                                <a href="/about">About Us</a>
+                               
+                               
+                            </li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                        <div class="inner-contact-options d-xl-none">
+                            <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a
+                                    href="tel:09811125050">9811125050</a></div>
+                            <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a
+                                    href="#"><span>hukam@Theradhatravel.com</span>
+                                       </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-xl-2">
+                    <div class="nav-right float-end d-xl-flex d-none ">
+                        <div class="hero-btns">
+                            <a href="#" class="button-fill-primary"><i class="fas fa-phone me-3"></i> 9811125050</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+      
+
+
+{% block body %}
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+<div class="footer-area mt-110">
+    <div class="footer-main-wrapper">
+        
+        <div class="container">
+            <div class="row justify-content-start g-4">
+                <div class="col-lg-4">
+                    <div class="footer-widget text-start">
+                        <h4 class="footer-widget-title">About</h4>
+                        <p>Radha Travels Is A Travel Agency In New Delhi. Our Travel Agent Believe In Making You Acquainted With World Class Travelling Experience Embedded With Adventure And Carried Forward With Our Unparalleled Ethos. When You Buy Things, You Create A Pile Whose Value Gets Demeaned With Each Passing Day, When You See Places, You Gain Memories That Outlast Your Life.</p>
+                            
+                    </div>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title">Quick Link</h4>
+                        <ul class="footer-links text-start">
+                            <li>
+                                <a href="/">Home</a>
+                                
+                            </li>
+                            <li><a href="/packages">Packages</a></li>
+                            
+                            <li >
+                                <a href="/select-category">Feet</a>
+                                
+                            </li>
+                            <li >
+                                <a href="/services">services</a>
+                                
+                            </li>
+                            <li >
+                                <a href="/about">About Us</a>
+                               
+                               
+                            </li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-about text-lg-start text-start">
+                        
+                            <div class="footer-social-wrap">
+                                <h5>Follow Us On:</h5>
+                                <ul class="footer-social-links justify-content-lg-start justify-content-center text-start">
+                                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                                    <li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
+                                    <li><a href="#"><i class="bx bxl-pinterest-alt"></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="footer-contact-wrapper">
+                <h5>Contact Us:</h5>
+                <ul class="footer-contact-list">
+                    <li><i class="bi bi-telephone-x"></i> <a href="tel:09811125050 ">+91-9811125050 </a></li>
+                    <li><i class="bi bi-telephone-x"></i> <a href="tel:09811992523  ">+91-9811992523  </a></li>
+                    <li><i class="bi bi-envelope-open"></i> <a href="#"><span>hukam@Theradhatravel.com</span></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12 col-md-12  ">
+                    <div class="copyright-link text-lg-start text-center">
+                        <p>Copyright 2023 Theradhatravel</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- main-footer end -->   
+
+    <script data-cfasync="false" src="{% static '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/chain_fade.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

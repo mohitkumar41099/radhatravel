@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block body %}
+
+
+
+<!-- <h1>{{ package.name }}</h1>
+<ul>
+  {% for detail in details %}
+    <li>{{ detail.name }}</li>
+  {% endfor %}
+</ul> -->
+
+
+
+<div class="package-details-wrapper pt-76">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-12">
+        <div class="tour-package-details">
+          <div class="pd-header">
+            <div class=" pd-top row row-cols-lg-4 row-cols-md-2 row-cols-2 gy-4">
+             
+              <div class="col">
+                
+              </div>
+            </div>
+            <div class="pd-thumb">
+              <img src="{{ package.image.url }}" alt>
+            </div>
+            <div class="header-bottom">
+              <div class="pd-lavel d-flex justify-content-between align-items-center flex-wrap gap-2">
+                
+              </div>
+              
+              <h3 class="d-subtitle">{{ package.packages_category }}</h3>
+            </div>
+
+          </div>
+          <div class="package-details-tabs">
+            
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active package-info-tab mt-3" id="pill-body1" role="tabpanel"
+                aria-labelledby="pills-package1">
+                <h2 class="pd-title">{{ package.name }}</h2>
+                <p>{{ package.des | safe }}</p>
+                
+                
+                
+                </div>
+               
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

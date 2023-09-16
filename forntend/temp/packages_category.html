@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block body %}
+
+<div class="package-area package-style-one pt-110 ">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="section-head-alpha">
+                    <h2>Popular Tour Package</h2>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="row g-4">
+            
+            
+            {% for packages_category in packages_category %}
+            
+            <div class="col-lg-4 col-md-6" >
+                <div class="package-card-alpha">
+                    <div class="package-thumb">
+                        <a href="{% url 'packages' packages_category.slug %}"><img src="{{ packages_category.image.url }}" alt  style="height: 300px;"></a>
+                        
+                    </div>
+                    <div class="package-card-body" >
+                        <h3 class="p-card-title"><a href="{% url 'packages' packages_category.slug %}">{{ packages_category.name }}</a></h3>
+                        <div class="p-card-bottom">
+                            <div class="book-btn">
+                                <a href="{% url 'packages' packages_category.slug %}">Views Now <i class="bx bxs-right-arrow-alt"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}

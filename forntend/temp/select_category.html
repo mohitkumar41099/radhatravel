@@ -1,0 +1,131 @@
+
+{% extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block body %}
+
+<style>
+    
+    .tab-container {
+  text-align: center;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #aaa;
+}
+
+.gallery-container {
+  margin-top: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin: 5px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<div class="package-area package-style-one">
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            {% for category in categories %}
+
+            <div class="col-lg-4 col-md-6">
+                <div class="package-card-alpha">
+                    <div class="package-thumb">
+                        <a href="{% url 'select_car' category.id %}"><img src="{{ category.image.url }}" alt
+                                style="height: 300px;"></a>
+
+                    </div>
+                    <div class="package-card-body " style="background-color: rgba(255, 255, 255, 0.8);">
+                        <h3 class="p-card-title text-dark text-start"><a href="{% url 'select_car' category.id %}">{{ category.name }}</a></h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+<div class="mt-5"></div>
+
+
+<section>
+    <div class="tab-container">
+      {% for category in categories %}
+        <button class="tab {% if loop.first %}active{% endif %}" onclick="showTab('tab{{ loop.index }}')">{{ category.name }}</button>
+      {% endfor %}
+    </div>
+  
+    <div class="gallery-container">
+      {% for category in categories %}
+        <div class="gallery tab{{ loop.index }}" {% if loop.first %}style="display: flex;"{% endif %}>
+          <!-- Images for Tab {{ loop.index }} -->
+          {% for car in cars %}
+            <img src="{{ car.url }}" alt="Image">
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  
+    <script type="text/javascript">
+      function showTab(tabName) {
+        // Hide all galleries
+        var galleries = document.getElementsByClassName("gallery");
+        for (var i = 0; i < galleries.length; i++) {
+          galleries[i].style.display = "none";
+        }
+  
+        // Deactivate all tabs
+        var tabs = document.getElementsByClassName("tab");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].className = tabs[i].className.replace(" active", "");
+        }
+  
+        // Show the selected gallery
+        document.getElementsByClassName(tabName)[0].style.display = "flex";
+  
+        // Activate the selected tab
+        var selectedTab = document.querySelector(".tab.tab" + tabName);
+        selectedTab.className += " active";
+      }
+  
+      // Show the initial tab on page load
+      showTab("tab1");
+    </script>
+  </section>
+  
+      
+{% endblock body %}
